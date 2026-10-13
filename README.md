@@ -114,6 +114,125 @@ period.
 
 ---
 
+## Research Objectives
+
+This project aims to:
+
+1. Estimate the spatial distribution of PM2.5 concentrations across West Kalimantan, Indonesia.
+2. Identify areas with relatively high estimated PM2.5 concentrations.
+3. Evaluate the performance of the Random Forest-based PM2.5 estimation model.
+4. Assess population exposure within areas characterized by relatively high estimated PM2.5 concentrations.
+5. Integrate remote sensing, geospatial analysis, atmospheric indicators, and population data to support wildfire-related air quality assessment.
+
+---
+
+## Data Sources
+
+The analysis integrates multiple geospatial, atmospheric, and population datasets:
+
+| Data Source | Purpose |
+|---|---|
+| NASA FIRMS | Wildfire and active fire information |
+| Sentinel-5P | Atmospheric pollutant indicators |
+| ERA5-Land | Meteorological and land-surface atmospheric context |
+| WorldPop | Population distribution and exposure estimation |
+| Google Earth Engine | Geospatial data processing and analysis |
+| Python | Data processing, statistical analysis, machine learning, and visualization |
+
+The datasets are integrated to support spatial estimation and interpretation of PM2.5 conditions associated with wildfire and biomass-burning activity.
+
+---
+
+## Methodology
+
+The analytical workflow consists of the following stages:
+
+1. **Data preparation**  
+   Spatial, atmospheric, wildfire, and population datasets are prepared and organized for analysis.
+
+2. **Geospatial processing**  
+   The datasets are processed spatially to obtain a consistent representation of environmental conditions across West Kalimantan.
+
+3. **PM2.5 estimation**  
+   A Random Forest-based machine learning approach is used to estimate the spatial distribution of PM2.5.
+
+4. **Spatial analysis**  
+   The estimated PM2.5 values are visualized as a spatial distribution map to identify areas with relatively higher estimated concentrations.
+
+5. **Population exposure assessment**  
+   The PM2.5 estimation is combined with WorldPop population data to estimate the population located within relatively high PM2.5 zones.
+
+6. **Atmospheric interpretation**  
+   Atmospheric indicators are used to provide supporting environmental context for interpreting the spatial PM2.5 pattern.
+
+7. **Dashboard development**  
+   The analysis outputs are presented through an interactive Streamlit dashboard for easier exploration and communication of the results.
+
+---
+
+## Model Performance
+
+The Random Forest PM2.5 estimation model produced the following evaluation results:
+
+| Metric | Result |
+|---|---:|
+| RMSE | 3.356 |
+| R² | 0.948 |
+| Q75 Threshold | 56.763 |
+
+The model evaluation indicates a high coefficient of determination (R² = 0.948), while the RMSE provides an estimate of the prediction error magnitude.
+
+The Q75 value of 56.763 is used as the threshold for identifying relatively high PM2.5 estimation zones in the population exposure analysis.
+
+---
+
+## Key Findings
+
+The spatial analysis indicates that estimated PM2.5 concentrations vary across West Kalimantan.
+
+The dashboard identifies relatively high PM2.5 estimation zones, particularly in parts of the study area associated with stronger spatial model values.
+
+The population exposure analysis estimates:
+
+- **Total WorldPop population:** 5,247,615 people
+- **Population within relatively high PM2.5 zones:** 2,544,996 people
+- **Estimated population exposure:** 48.50%
+
+These results provide a spatial perspective on the potential population exposure associated with relatively high estimated PM2.5 conditions.
+
+The findings should be interpreted as model-based spatial estimates and population exposure estimates rather than direct measurements of individual health exposure.
+
+---
+
+## Limitations
+
+Several limitations should be considered when interpreting the results:
+
+1. PM2.5 values presented in the dashboard are model-based spatial estimates.
+2. The analysis does not represent direct measurements of PM2.5 exposure for every individual.
+3. Population exposure estimates depend on the spatial distribution represented by the WorldPop dataset.
+4. Satellite-derived atmospheric indicators provide supporting environmental information but do not directly represent ground-level PM2.5 measurements at every location.
+5. The results should therefore be interpreted together with ground monitoring data and other field observations when available.
+6. The analysis provides spatial evidence of estimated PM2.5 conditions and should not be interpreted as establishing a direct causal relationship between wildfire activity and specific health outcomes.
+
+---
+
+## Citation
+
+If you use this repository, dashboard, dataset, or analytical workflow in academic work, please cite:
+
+> Lesmana, M. D. (2026). *West Kalimantan PM2.5 Estimation and Wildfire Air Quality Analysis*. GitHub repository.
+
+Repository:
+
+https://github.com/dedylesmana/wildfire-air-quality-west-kalimantan
+
+Live Dashboard:
+
+https://west-kalimantan-pm25.streamlit.app/
+
+---
+
 ## Interactive Dashboard
 
 The interactive PM2.5 dashboard is available for local
