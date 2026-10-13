@@ -340,21 +340,26 @@ This script supports the preparation of spatial predictor data used in the PM2.5
 
 ## Interactive Dashboard
 
-The project includes an interactive Streamlit dashboard for exploring the PM2.5 estimation results.
+This project includes an interactive Streamlit dashboard for exploring the spatial PM2.5 estimation results over West Kalimantan.
 
-The dashboard provides visualization of:
+The dashboard provides interactive visualization of:
 
-- Spatial PM2.5 estimation
-- Model performance
-- Atmospheric parameters
+- Estimated PM2.5 concentrations
+- Spatial distribution of PM2.5
+- Relatively high PM2.5 areas
 - Population exposure
-- Study area information
+- Random Forest model performance
+- Supporting atmospheric indicators
 
-The dashboard application is implemented in:
+The main application is:
 
 ```text
 app.py
 ```
+
+### Live Dashboard
+
+The interactive PM2.5 dashboard is available for local execution using Streamlit.
 
 To run the dashboard locally:
 
