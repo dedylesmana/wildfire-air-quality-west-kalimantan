@@ -383,7 +383,8 @@ The results can support further research on air quality monitoring, wildfire imp
 
 **M. Dedy Lesmana**
 
-West Kalimantan PM2.5 and Wildfire Air Quality Analysis
+Independent learner working on remote sensing, geospatial analysis,
+machine learning, and wildfire air quality assessment.
 
 Indonesia
 
