@@ -1,5 +1,17 @@
 # West Kalimantan PM2.5 Estimation and Wildfire Air Quality Analysis
 
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
+![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-Remote%20Sensing-green)
+![NASA FIRMS](https://img.shields.io/badge/NASA-FIRMS-orange)
+![Sentinel-5P](https://img.shields.io/badge/Copernicus-Sentinel--5P-blue)
+![ERA5-Land](https://img.shields.io/badge/ECMWF-ERA5--Land-purple)
+![WorldPop](https://img.shields.io/badge/WorldPop-Population-lightgrey)
+![Geospatial](https://img.shields.io/badge/Geospatial-GIS-green)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-yellow)
+
+Remote sensing-based spatial estimation of PM2.5 and population exposure assessment over West Kalimantan, Indonesia.
+
 ## Live Dashboard
 
 **Interactive Dashboard:**  
