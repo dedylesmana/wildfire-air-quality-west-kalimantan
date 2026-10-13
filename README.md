@@ -284,27 +284,43 @@ The analysis outputs include spatial PM2.5 estimation, model performance evaluat
 The main outputs of this project include:
 
 - Spatial PM2.5 estimation over West Kalimantan
-- Random Forest model evaluation
+- Random Forest model performance evaluation
 - Sentinel-5P atmospheric parameter analysis
 - Identification of relatively high PM2.5 areas
 - Population exposure assessment
 - Interactive PM2.5 visualization dashboard
 
-### PM2.5 Spatial Estimation
+### Spatial Distribution of Estimated PM2.5
 
-![PM2.5 Spatial Estimation](figures/peta_pm25_kalbar.png)
+![Spatial Distribution of Estimated PM2.5](figures/peta_pm25_kalbar.png)
 
-### Model Performance
+**Figure 1.** Spatial distribution of estimated PM2.5 over West Kalimantan during July-September 2026.
 
-![Model Performance](figures/model_performance_kalbar.png)
+The map shows the spatial distribution of estimated PM2.5 generated using the trained Random Forest model and spatial predictor data.
 
-### Population Exposure
+### Random Forest Model Performance
 
-![Population Exposure](figures/paparan_populasi_kalbar.png)
+![Random Forest Model Performance](figures/model_performance_kalbar.png)
+
+**Figure 2.** Performance evaluation of the Random Forest PM2.5 estimation model.
+
+The model performance is evaluated using the coefficient of determination (R2) and root mean square error (RMSE).
 
 ### Sentinel-5P Atmospheric Parameters
 
-![Atmospheric Parameters](figures/parameter_atmosfer_s5p_kalbar.png)
+![Sentinel-5P Atmospheric Parameters](figures/parameter_atmosfer_s5p_kalbar.png)
+
+**Figure 3.** Spatial distribution of selected Sentinel-5P atmospheric parameters used in the analysis.
+
+The atmospheric indicators provide spatial information used as predictors in the PM2.5 estimation workflow.
+
+### Population Exposure Assessment
+
+![Population Exposure Assessment](figures/paparan_populasi_kalbar.png)
+
+**Figure 4.** Population exposure assessment within relatively high estimated PM2.5 areas.
+
+WorldPop 2020 population data are integrated with the estimated PM2.5 distribution to identify potentially exposed populations.
 
 ---
 
