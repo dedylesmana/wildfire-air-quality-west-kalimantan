@@ -18,6 +18,22 @@ The project also provides an interactive Streamlit dashboard for visualizing the
 
 ---
 
+## Research Questions
+
+This project addresses the following research questions:
+
+1. How can satellite-derived atmospheric indicators and meteorological variables be integrated to estimate the spatial distribution of PM2.5 over West Kalimantan?
+
+2. How accurately can Random Forest regression estimate PM2.5 using atmospheric and meteorological predictors?
+
+3. Which areas show relatively high estimated PM2.5 concentrations during July-September 2026?
+
+4. How many people are potentially exposed to relatively high estimated PM2.5 concentrations?
+
+5. How can spatial PM2.5 information be presented through an interactive dashboard to support wildfire-related air quality assessment?
+
+---
+
 ## Study Area
 
 The study area covers West Kalimantan Province, Indonesia.
@@ -246,6 +262,20 @@ streamlit run app.py
 ```
 
 The application can then be accessed through the local Streamlit server.
+
+---
+
+## Results Summary
+
+The Random Forest model achieved an R2 of 0.948 and an RMSE of 3.356 based on the available model evaluation dataset.
+
+The trained model was applied to spatial predictor data to generate estimated PM2.5 concentrations across West Kalimantan during July-September 2026.
+
+Relatively high PM2.5 areas were identified using the 75th percentile threshold of the estimated PM2.5 distribution.
+
+The resulting spatial estimates were integrated with WorldPop 2020 population data to assess the population potentially exposed to relatively high estimated PM2.5 concentrations.
+
+The analysis outputs include spatial PM2.5 estimation, model performance evaluation, Sentinel-5P atmospheric parameter analysis, population exposure assessment, and an interactive visualization dashboard.
 
 ---
 
