@@ -1,192 +1,123 @@
 # West Kalimantan PM2.5 Estimation and Wildfire Air Quality Analysis
 
-Remote sensing-based spatial estimation of PM2.5 and population exposure assessment over West Kalimantan, Indonesia.
+## Live Dashboard
 
-This research project integrates satellite observations, meteorological variables, population data, Google Earth Engine, Python, and Random Forest modelling to investigate the spatial distribution of estimated PM2.5 during July-September 2026.
+**Interactive Dashboard:**  
+https://west-kalimantan-pm25.streamlit.app/
+
+This project presents a spatial analysis of estimated PM2.5 concentrations
+in West Kalimantan, Indonesia, with supporting analysis of wildfire-related
+air quality conditions.
+
+The project combines geospatial analysis, remote sensing, machine learning,
+and population exposure assessment to examine the spatial distribution of
+estimated PM2.5.
 
 ---
 
 ## Project Overview
 
-Forest and land fires can contribute to elevated atmospheric pollution, particularly fine particulate matter (PM2.5).
+This project was developed as an independent learning project based on a
+Google Earth Engine geospatial analysis workflow.
 
-This project develops a remote sensing-based spatial estimation workflow for PM2.5 over West Kalimantan, Indonesia.
+The analysis focuses on West Kalimantan and examines the spatial distribution
+of estimated PM2.5 concentrations during July-September 2026.
 
-The workflow integrates satellite-derived atmospheric indicators, meteorological variables, population data, geospatial processing, and machine learning to produce spatial estimates of PM2.5 and assess population exposure in areas with relatively high estimated concentrations.
-
-The project also provides an interactive Streamlit dashboard for visualizing the analysis results.
+The project also provides supporting information on population exposure,
+model performance, and atmospheric indicators.
 
 ---
 
-## Research Questions
+## Objectives
 
-This project addresses the following research questions:
+The main objectives of this project are:
 
-1. How can satellite-derived atmospheric indicators and meteorological variables be integrated to estimate the spatial distribution of PM2.5 over West Kalimantan?
-
-2. How accurately can Random Forest regression estimate PM2.5 using atmospheric and meteorological predictors?
-
-3. Which areas show relatively high estimated PM2.5 concentrations during July-September 2026?
-
-4. How many people are potentially exposed to relatively high estimated PM2.5 concentrations?
-
-5. How can spatial PM2.5 information be presented through an interactive dashboard to support wildfire-related air quality assessment?
+- Estimate the spatial distribution of PM2.5 concentrations.
+- Identify areas with relatively high estimated PM2.5.
+- Evaluate the performance of the Random Forest model.
+- Estimate population exposure to relatively high PM2.5 concentrations.
+- Present the analysis through an interactive web dashboard.
+- Support further interpretation of wildfire-related air quality conditions.
 
 ---
 
 ## Study Area
 
-The study area covers West Kalimantan Province, Indonesia.
+**Study area:** West Kalimantan Province, Indonesia
 
-Administrative boundaries from the Geospatial Information Agency of Indonesia (BIG) are used as the geographic reference for the spatial analysis.
+**Analysis period:** July-September 2026
 
----
-
-## Data Sources
-
-The analysis integrates the following datasets:
-
-- Sentinel-5P atmospheric observations
-- ERA5-Land meteorological variables
-- WorldPop 2020 population data
-- Administrative boundaries from BIG
-- Model-derived PM2.5 spatial data
-- Wildfire and biomass-burning related spatial information
-
-### Sentinel-5P
-
-Satellite-derived atmospheric indicators are used as spatial predictors, including:
-
-- Aerosol Index
-- NO2
-- HCHO
-
-### ERA5-Land
-
-Meteorological variables include:
-
-- 2 m air temperature
-- Wind components
-
-### WorldPop
-
-WorldPop 2020 population data are used to support population exposure assessment.
-
-### Administrative Boundaries
-
-Administrative boundaries from BIG are used to define the West Kalimantan study area.
+The study area was selected to examine spatial variation in estimated PM2.5
+and its potential relationship with wildfire and biomass-burning conditions.
 
 ---
 
-## Analysis Period
+## Data and Analysis
 
-The atmospheric analysis covers:
+The project uses geospatial analysis outputs generated through a
+Google Earth Engine workflow and processed into analysis-ready datasets.
 
-**July-September 2026**
+The project includes:
 
-Population exposure assessment uses WorldPop 2020 data.
+- Spatial PM2.5 estimation data
+- PM2.5 summary statistics
+- Random Forest model performance data
+- Population exposure estimation
+- Atmospheric indicator information
+- Spatial visualization outputs
 
----
-
-## Methodology
-
-The analysis follows a multi-stage geospatial and machine learning workflow:
-
-1. Define the West Kalimantan study area.
-2. Prepare satellite-derived atmospheric indicators using Google Earth Engine.
-3. Extract meteorological variables from ERA5-Land.
-4. Integrate atmospheric and meteorological predictors.
-5. Develop a Random Forest regression model for PM2.5 estimation.
-6. Evaluate model performance using R2 and RMSE.
-7. Apply the trained model to spatial predictor data.
-8. Generate a spatial PM2.5 estimation map.
-9. Identify relatively high PM2.5 areas using the 75th percentile threshold.
-10. Integrate PM2.5 estimates with WorldPop population data.
-11. Estimate population exposure within relatively high PM2.5 zones.
-12. Visualize the results through maps, figures, and an interactive Streamlit dashboard.
+The processed datasets are provided in the `data/` directory.
 
 ---
 
 ## Machine Learning Model
 
-The project uses **Random Forest regression** to estimate PM2.5 from atmospheric and meteorological predictors.
+A Random Forest model was used for PM2.5 estimation.
 
-Model performance is evaluated using:
+The dashboard reports the following model performance indicators:
 
-- R2
-- RMSE
+- **RMSE:** 3.356
+- **R²:** 0.948
+- **Q75 threshold:** 56.763
 
-### Model Performance
-
-| Metric | Value |
-|---|---:|
-| R2 | 0.948 |
-| RMSE | 3.356 |
-
-The reported model evaluation represents the relationship between the simulated PM2.5 target and Random Forest predictions.
+The Q75 threshold is used in the dashboard to identify relatively high
+PM2.5 conditions.
 
 ---
 
-## Spatial PM2.5 Estimation
+## Population Exposure
 
-The trained Random Forest model is applied to spatial predictor data to generate PM2.5 estimates across West Kalimantan.
+The dashboard provides an estimation of population exposure based on the
+spatial PM2.5 results and WorldPop population data.
 
-The resulting spatial dataset is stored in:
+The current analysis reports:
 
-```text
-data/pm25_spatial_kalbar.csv
+- **Total population:** 5,247,615
+- **Population in relatively high PM2.5 zones:** 2,544,996
+- **Estimated exposure percentage:** 48.50%
 
----
-
-## Population Exposure Assessment
-
-Population exposure assessment combines the spatial PM2.5 estimation with WorldPop 2020 population data.
-
-Areas with relatively high PM2.5 concentrations are identified using the 75th percentile threshold.
-
-The resulting analysis provides an estimate of population exposure within areas characterized by relatively high estimated PM2.5 concentrations.
-
-### Population Exposure
-
-![Population Exposure](figures/paparan_populasi_kalbar.png)
-
----
-
-## Atmospheric Parameters
-
-Sentinel-5P atmospheric indicators are incorporated into the spatial modelling workflow.
-
-The atmospheric parameters used in the analysis include:
-
-- Aerosol Index
-- NO2
-- HCHO
-
-### Sentinel-5P Atmospheric Parameters
-
-![Sentinel-5P Atmospheric Parameters](figures/parameter_atmosfer_s5p_kalbar.png)
-
----
-
-## Model Performance Visualization
-
-The model evaluation results are provided as a graphical visualization.
-
-![Model Performance](figures/model_performance_kalbar.png)
+These values represent model-based spatial estimates and should be
+interpreted within the limitations of the underlying datasets and analysis
+period.
 
 ---
 
 ## Interactive Dashboard
 
-The project includes an interactive Streamlit dashboard for exploring the PM2.5 estimation results.
+The interactive PM2.5 dashboard is available for local
+execution using Streamlit.
 
-The dashboard provides visualization of:
+Access the live dashboard:
 
-- Spatial PM2.5 estimation
-- Model performance
-- Atmospheric parameters
-- Population exposure
-- Study area information
+[West Kalimantan PM2.5 Dashboard](https://west-kalimantan-pm25.streamlit.app)
+
+### Run locally
+
+Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+---
 
 The dashboard application is implemented in:
 
